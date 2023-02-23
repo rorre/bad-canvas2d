@@ -86,7 +86,7 @@ function start() {
 
     intervalId = setInterval(async () => {
         await startDraw()
-        let expectedOffset = Math.floor(audio.currentTime / (1 / 30))
+        let expectedOffset = Math.floor(audio.currentTime / (1 / 25))
         if (currentOffset > expectedOffset) {
             // We are way too quick! let's just wait until we match the offset :)
             return
@@ -107,5 +107,5 @@ function start() {
             messageElem.innerText = lyricsJson[0][1]
             lyricsJson.splice(0, 1)
         }
-    }, 1000 / 29.8)
+    }, 1000 / 25)
 }
